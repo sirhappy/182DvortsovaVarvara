@@ -8,21 +8,20 @@ namespace Task2
 {
 	class Program
 	{
-		public static uint F(uint number,out uint sum_nech1)
+		public static void F(uint number,ref uint sum_nech,ref uint sum_ch)
 		{
 			uint digit = number;
 			uint last;
-			uint sum_ch = 0, sum_nech=0;
-			while (number > 0)
+			while (digit != 0)
 			{
 				last = digit % 10;
-				digit /= 10;
-				if (digit.ToString().Length%2!=0) sum_ch += last;
-				else sum_nech += last;
 				
+				if (digit.ToString().Length%2==0) sum_ch += last;
+				else sum_nech += last;
+				digit /= 10;
+
 			}
-			sum_nech1 = sum_nech;
-			return sum_ch;
+
 		}
 		public static bool getDouble(string name, out uint value)
 		{
@@ -32,15 +31,20 @@ namespace Task2
 		static void Main(string[] args)
 		{
 			uint number;
+			
 			do
 			{
-				Console.Write("Введите число а = ");
-				while (!uint.TryParse(Console.ReadLine(), out number) )
+				Console.Clear();
+				uint sum_nech = 0,
+				sum_ch = 0;
+				if (getDouble("number", out number))
 				{
-					Console.WriteLine("Error ");
-					Console.Write("Введите число а = ");
+					F(number, ref sum_ch, ref sum_nech);
+					Console.WriteLine($"Сумма на четных местах = {sum_ch},Сумма на нечетных местах ={sum_nech}");
 				}
+				else Console.WriteLine("error");
 
+				
 				
 			} while (Console.ReadKey().Key != ConsoleKey.Escape);
 		}
