@@ -15,9 +15,9 @@ namespace Task1
 			double sum = 0;
 			for(int a = 1; a < n; a++)
 			{
-				for(int b = 2; b < n ; b++)
+				for(int b = a; b < n ; b++)
 				{
-					for (int c = 3; c< n ; c++)
+					for (int c = b-1; c< n ; c++)
 					{
 						if (a * a + b * b == c * c)
 						{
