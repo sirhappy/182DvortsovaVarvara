@@ -50,17 +50,21 @@ namespace Task03
 		static void Main(string[] args)
 		{
 			int n;
+			double x,angle;
 			do {
 				do { Console.Write("Enter n = "); }
 				while (!int.TryParse(Console.ReadLine(), out n) || n <= 0||n>1e+3) ;
+				do { Console.Write("Enter x = "); }
+				while (!double.TryParse(Console.ReadLine(), out angle) || angle <= 0 || angle > 1e+3);
 				double[] arr = new double[n];
-				arr = Row(Math.PI, n);
+				x = angle % (2 * Math.PI);
+				arr = Row(x, n);
 				PrintArr(arr);
 				Console.WriteLine();
 				Console.WriteLine("by Row");
 				Console.WriteLine(SumArr(ref arr));
 				Console.WriteLine("Using Math.Sin");
-				Console.WriteLine(Math.Sin(1));
+				Console.WriteLine(Math.Sin(angle));
 
 
 			} while (Console.ReadKey().Key!=ConsoleKey.Escape);

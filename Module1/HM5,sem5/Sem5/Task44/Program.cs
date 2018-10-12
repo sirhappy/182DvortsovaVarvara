@@ -15,24 +15,79 @@ namespace Task44
 {
 	class Program
 	{
-		public static double Elem(int i , int a0)
+		/// <summary>
+		/// Считает кол-во элементов
+		/// </summary>
+		/// <param name="a0">первый член пос-ти</param>
+		/// <returns>кол-во элементов массива</returns>
+		public static int CountElem(double a0)
 		{
-			double a;
-			if (i == 0) return a0;
-			return a = Elem(i - 1, a0) % 2 == 0 ? Elem(i - 1, a0) / 2 : (3 * Elem(i - 1, a0) + 1);
-		}
-		public static void GetArr(int a0)
-		{
-			double[] arr = new double[a0];
-			for(int i = 0; i < a0; i++)
+			int count = 1;
+			double corrent = a0;
+			for(int i = 0; corrent > 1; i++)
 			{
-				arr[i] = Elem(i, a0);
-				if (arr[i] == 1) break;
+				corrent = corrent % 2 == 0 ? corrent / 2 : (3 * corrent + 1);
+				
+				count += 1;
+			}
+			return count;
+		}
+		/// <summary>
+		/// Заполнение массива
+		/// </summary>
+		/// <param name="arr"></param>
+		/// <param name="a0"></param>
+		public static double[] GetArr(double a0,int count)
+		{
+			double[] arr = new double[count];
+			arr[0] = a0;
+;			for (int i = 1; i < arr.Length; i++)
+			{
+				arr[i] = arr[i-1] % 2 == 0 ? arr[i - 1]  / 2 : (3 * arr[i - 1] + 1);
+				
+			}
+			return arr;
+
+
+		}
+		/// <summary>
+		/// Вывод элементов массива по 5 в каждой строке
+		/// </summary>
+		/// <param name="arr"></param>
+		public static void PrintArr(double[] arr)
+		{
+			int max = 5,count=0;
+			for(int i = 0; i < arr.Length; i++)
+			{
+				if (count != max) Console.Write($"{arr[i]} ");
+				else {
+					count =0;
+					Console.WriteLine();
+					Console.Write($"{arr[i]} "); }
+				count += 1;
 			}
 
 		}
+		
 		static void Main(string[] args)
 		{
+		double a0;
+			do {
+				Console.Clear();
+				Console.Write("Enter a0  = ");
+				while(!double.TryParse(Console.ReadLine(),out a0) || a0 < 0 || a0 > 1e+2)
+				{
+					Console.WriteLine("Error,Reenter pls");
+					Console.Write("Enter a0  = ");
+				}
+				int n = CountElem(a0);
+				
+				GetArr( a0,n);
+				Console.WriteLine();
+				PrintArr(GetArr(a0, n)) ;
+				Console.WriteLine();
+				Console.WriteLine("Press any key to continue or Escape to exit");
+			} while (Console.ReadKey().Key!=ConsoleKey.Escape);
 		}
 	}
 }
