@@ -8,6 +8,7 @@ namespace Task66
 {
 	class Program
 	{
+		public static void GetArr(int a) { }
 		static void Main(string[] args)
 		{
 			int n;
