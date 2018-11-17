@@ -51,7 +51,10 @@ namespace Task1
 				arr[i] = new AruthmeticSequence(rnd.Next(0, 1000), rnd.Next(1, 10));
 			}
 			int step = rnd.Next(3, 15);
-			for(int i = 0; i < arr.Length; i++)
+			//Вывести на экран информацию о
+			//последовательностях из массива, у которых элемент с номером step больше, чем у
+			//отдельной последовательности.
+			for (int i = 0; i < arr.Length; i++)
 			{
 				if (arr[i][step] > sec[step])
 				{
@@ -60,9 +63,11 @@ namespace Task1
 				}
 			}
 			Console.WriteLine("For Every Sequence Sum = ");
-			for(int i = 0; i < arr.Length; i++)
+			//Для каждой последовательности из массива вывести
+			//сумму первых step членов.
+			for (int i = 0; i < arr.Length; i++)
 			{
-				Console.WriteLine("sum =" + arr[i].GetSum(n));//Додумать это место
+				Console.WriteLine("sum =" + arr[i].GetSum(step));//Додумать это место
 			}
 			Console.ReadKey();
 

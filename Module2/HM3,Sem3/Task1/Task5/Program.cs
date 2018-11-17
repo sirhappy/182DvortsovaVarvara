@@ -8,19 +8,18 @@ namespace Task5
 {
 	class VideoFiele
 	{
-		string _name;
-		int _duration;
-		int _quality;
+		string _name;//имя видео
+		int _duration;//длительность в секундах
+		int _quality;// качество видеофайла
 		public VideoFiele(string name ,int duration,int quality)
 		{
 			_name = name;
 			_duration = duration;
 			_quality = quality;
 		}
-		public int Size
+		public int Size//размер видеофайла
 		{
-			get { return Size; }
-			set { Size = value; }
+			get { return _duration * _quality; }
 		}
 		public string GetInfo()
 		{
@@ -33,12 +32,10 @@ namespace Task5
 	{
 		public static string RandomString(int n )
 		{
-			char ch = (char)rnd.Next('a', 'z');
-			
 			string strstring = "";
 			for (int i = 0; i < n; i++)
 			{
-				strstring += ch;
+				strstring += (char)rnd.Next('a', 'z'); ;
 			}
 			return strstring;
 		}
@@ -47,18 +44,23 @@ namespace Task5
 		static void Main(string[] args)
 		{
 			int n = rnd.Next(5, 15);
-			VideoFiele video = new VideoFiele("Video",rnd.Next(60,360),rnd.Next(100,1000));
-			VideoFiele[] videos = new VideoFiele[n];
+			VideoFiele video = new VideoFiele("Video",rnd.Next(60,360),rnd.Next(100,1000));//обьект видеофайл
+			VideoFiele[] videos = new VideoFiele[n];//массив из обьектов типа Vidoefile
+
 			for(int i = 0; i < videos.Length; i++)
 			{
 				videos[i] = new VideoFiele(RandomString(rnd.Next(2, 9)), rnd.Next(60, 360), rnd.Next(100, 1000));
 			}
+			
 			for(int i = 0; i < videos.Length; i++)
 			{
-				if(videos[i].Size)
+				if (videos[i].Size > video.Size)
+				{
+					Console.WriteLine(videos[i].GetInfo());
+				}
 			}
+			Console.ReadLine();
 
-			
 
 
 		}
