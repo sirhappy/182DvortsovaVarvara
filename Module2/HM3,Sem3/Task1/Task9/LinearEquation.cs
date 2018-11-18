@@ -23,7 +23,7 @@ namespace Task9
 		public double C { get { return c; } }
 		public double Root
 		{
-			get { return (double)(C - B) / A; }
+			get { return (double)(C - B) / A;}
 
 		}
 		public bool isCorrect(double a)
