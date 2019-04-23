@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ArrayOfGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Group>
+    <students>
+      <Student>
+        <SureName>Varya</SureName>
+        <Course>1</Course>
+      </Student>
+      <Student>
+        <SureName>Jenya</SureName>
+        <Course>1</Course>
+      </Student>
+    </students>
+    <GroupName>BPI182</GroupName>
+  </Group>
+  <Group>
+    <students>
+      <Student>
+        <SureName>Katya</SureName>
+        <Course>1</Course>
+      </Student>
+      <Student>
+        <SureName>Tolya</SureName>
+        <Course>1</Course>
+      </Student>
+    </students>
+    <GroupName>BPI181</GroupName>
+  </Group>
+</ArrayOfGroup>

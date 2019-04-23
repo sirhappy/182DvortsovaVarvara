@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ArrayOfVectors3D xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Vectors3D>
+    <A>8</A>
+    <B>5</B>
+    <C>0</C>
+  </Vectors3D>
+  <Vectors3D>
+    <A>8</A>
+    <B>9</B>
+    <C>5</C>
+  </Vectors3D>
+  <Vectors3D>
+    <A>1</A>
+    <B>2</B>
+    <C>3</C>
+  </Vectors3D>
+  <Vectors3D>
+    <A>8</A>
+    <B>7</B>
+    <C>4</C>
+  </Vectors3D>
+  <Vectors3D>
+    <A>9</A>
+    <B>2</B>
+    <C>6</C>
+  </Vectors3D>
+</ArrayOfVectors3D>

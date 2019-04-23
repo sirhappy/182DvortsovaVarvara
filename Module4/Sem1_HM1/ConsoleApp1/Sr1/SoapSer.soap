@@ -1,0 +1,36 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<SOAP-ENC:Array SOAP-ENC:arrayType="a1:Vectors3D[5]" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Sr1/Sr1%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<item href="#ref-3"/>
+<item href="#ref-4"/>
+<item href="#ref-5"/>
+<item href="#ref-6"/>
+<item href="#ref-7"/>
+</SOAP-ENC:Array>
+<a1:Vectors3D id="ref-3" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Sr1/Sr1%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<a>8</a>
+<b>5</b>
+<c>0</c>
+</a1:Vectors3D>
+<a1:Vectors3D id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Sr1/Sr1%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<a>8</a>
+<b>9</b>
+<c>5</c>
+</a1:Vectors3D>
+<a1:Vectors3D id="ref-5" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Sr1/Sr1%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<a>1</a>
+<b>2</b>
+<c>3</c>
+</a1:Vectors3D>
+<a1:Vectors3D id="ref-6" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Sr1/Sr1%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<a>8</a>
+<b>7</b>
+<c>4</c>
+</a1:Vectors3D>
+<a1:Vectors3D id="ref-7" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Sr1/Sr1%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<a>9</a>
+<b>2</b>
+<c>6</c>
+</a1:Vectors3D>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
