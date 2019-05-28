@@ -17,7 +17,8 @@ ValueStore(Expression e, double x)
 • В основной программе создать объект me класса Expression,
 использовать ссылку me в конструкторе объекта vs класса
 ValueStore. Задавая разные выражения поля me.ex, выводить
-значения vs. expCurrValue
+значения vs. expCurrValue
+
  */
 namespace Task02
 {

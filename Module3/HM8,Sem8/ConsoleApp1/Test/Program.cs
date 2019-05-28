@@ -60,7 +60,7 @@ namespace Test
 		{
 
 		}
-		public interface Istudent<out T>
+		public interface Istudent< out T>
 		{
 			void Move(T student);
 		}
